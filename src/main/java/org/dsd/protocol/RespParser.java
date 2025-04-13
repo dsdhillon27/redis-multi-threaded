@@ -1,8 +1,6 @@
 package org.dsd.protocol;
 
 import lombok.extern.slf4j.Slf4j;
-import org.dsd.RedisServer;
-import org.slf4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,11 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-public class RedisParser {
+public class RespParser {
 
     private final BufferedReader bufferedReader;
 
-    public RedisParser(InputStream inputStream) {
+    public RespParser(InputStream inputStream) {
         bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
     }
 
