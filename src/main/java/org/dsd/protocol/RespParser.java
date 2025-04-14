@@ -18,7 +18,7 @@ public class RespParser {
         bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
     }
 
-    public List<String> parseCommands() throws IOException {
+    public List<String> parseCommand() throws IOException {
         String line = bufferedReader.readLine();
 
         if(line == null || !line.startsWith("*")){

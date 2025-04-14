@@ -15,7 +15,7 @@ class RespParserTest {
         String command = "*3\r\n$3\r\nSET\r\n$3\r\nAGE\r\n$2\r\n27\r\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(command.getBytes());
         RespParser respParser = new RespParser(inputStream);
-        List<String> args = respParser.parseCommands();
+        List<String> args = respParser.parseCommand();
         assertEquals(3, args.size());
         assertEquals("SET", args.get(0));
         assertEquals("AGE", args.get(1));
